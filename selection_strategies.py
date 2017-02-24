@@ -20,7 +20,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from imdb import load_imdb
 from feature_expert import print_all_features
 from sklearn.naive_bayes import MultinomialNB
-from models import FeatureMNBUniform, FeatureMNBWeighted, PoolingMNB
+#from models import FeatureMNBUniform, FeatureMNBWeighted, PoolingMNB
 from sklearn import metrics
 
 def RandomBootstrap(X_pool, y_pool, size, balance, seed=0):
