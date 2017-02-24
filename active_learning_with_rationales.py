@@ -52,7 +52,7 @@ def learn(model_type, X_pool, y_pool, X_test, y_test, training_set, pool_set, fe
     X_train = None
     y_train = []
     
-    if model_type=='poolingMNB':      
+    if model_type=='Melville_etal':      
         # create feature model  
         classpriors=np.zeros(2)            
         classpriors[1] = (np.sum(y_pool[docs])*1.)/(len(docs)*1.)
@@ -96,7 +96,7 @@ def learn(model_type, X_pool, y_pool, X_test, y_test, training_set, pool_set, fe
 
         else:
             x = sp.csr_matrix(X_pool[doc_id], dtype=float)
-            if "poolingMNB" not in model_type:         
+            if "Melville_etal" not in model_type:         
                 x_feats = x[0].indices
                 for f in x_feats:
                     if f == feature:
